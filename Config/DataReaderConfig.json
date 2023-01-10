@@ -1,0 +1,44 @@
+{
+  "save_results_path": "/home/teamlead/PycharmProjects/RPPSP/Datasets/Price/Price_ind",
+  "random_state": 42,
+  "Clear_allFiles": false,
+  "dataset_file_path": "/home/teamlead/PycharmProjects/RPPSP/Datasets/Price/Price_5fold.csv",
+  "independent_testing_file": "/home/teamlead/PycharmProjects/RPPSP/Datasets/Price/Price_Independent_test_set.csv",
+  "savepath-estimatorResults": "Estimator_Res",
+  "encodedSequencesPathResults" : "Encoders_Res/",
+  "savepath-estimatorResults_R" : "Estimator_Res_Level_2/",
+  "data_splitting": {
+    "data_split_method": "k-fold",
+    "k_fold": {
+      "n_folds":5
+    }
+  },
+  "Encoders": {
+    "apply_feature_encoding": true,
+    "sequence_type": "PROT",
+    "feature_encoders": [
+      "CTAPAAC"
+    ],
+    "parameters": {
+      "lambdain": [1],
+    "weight": [0.05],
+    "L_true": true,
+    "L_values": [4]
+      
+    },
+    "Encoded_feature_dir": "Encoded_Feature"
+
+  },
+    "Evaluation": {
+      "apply_evaluation": true,
+      "classifiers": ["RandomForestClassifier"],
+      "multiclass_config_file": "/home/teamlead/PycharmProjects/RPPSP/Config/classifier_config.json"
+    },
+    "Prediction": {
+      "modification_type": "None",
+      "Dataset_name": "dataset",
+      "model_path": "/home/teamlead/PycharmProjects/RPPSP/Dataset/k-fold/predictions/models/4mC/C.equisetifolia/RandomForestClassifier-PSTNPss-ktuple-1-res.csv.pkl"
+    }
+  }
+
+
